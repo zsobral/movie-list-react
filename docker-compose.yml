@@ -1,0 +1,44 @@
+version: "3"
+
+services:
+  web:
+    image: movie-list-react:dev
+    build:
+      context: .
+      args:
+        - NODE_ENV=development
+    environment:
+      - NODE_ENV=development
+    volumes:
+      - .:/opt/app:delegated
+      - notused:/opt/app/node_modules
+    labels:
+      - traefik.enable=true
+      - traefik.backend=react-app
+      - traefik.port=3000
+      - traefik.frontend.rule=PathPrefix:/
+
+  api:
+    image: movie-list-api:dev
+    env_file:
+      - .env.local
+    labels:
+      - traefik.enable=true
+      - traefik.backend=api
+      - traefik.port=3000
+      - traefik.frontend.rule=PathPrefix:/api
+
+  mongo:
+    image: mongo:4
+  
+  traefik:
+    image: traefik
+    command: --api --docker --docker.exposedByDefault=false
+    ports:
+      - "8080:8080"
+      - "80:80"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+
+volumes:
+  notused:
