@@ -18,3 +18,8 @@
 .button.button-full-width {
   width: 100%;
 }
+
+.button:disabled {
+  cursor: not-allowed;
+  background-color: #6c757d;
+}

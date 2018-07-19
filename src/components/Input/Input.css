@@ -19,17 +19,31 @@
   margin: 10px 0;
   box-sizing: border-box;
   width: 100%;
-  color: #FFFFFF;
+  color: #ffffff;
   /*background-color: #2B2A37;*/
-  background-color: #2B2937;
+  background-color: #2b2937;
   font-family: 'Roboto', sans-serif;
 }
 
 .input:focus {
   outline: none;
-  box-shadow: 0 0 0px 2px #201E2A;
+  box-shadow: 0 0 0 2px #201e2a;
 }
 
 .input::placeholder {
-  color: #C6C6C6;
+  color: #c6c6c6;
+}
+
+.input-group.input-group-error .input {
+  border-color: #dd4646;
+}
+
+.input-group.input-group-error .input:focus {
+  box-shadow: 0 0 0 2px #ff5050;
+}
+
+.input-error-message {
+  color: #ff5050;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
 }
