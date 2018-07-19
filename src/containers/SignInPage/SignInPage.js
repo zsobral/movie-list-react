@@ -79,7 +79,7 @@ class SignInPage extends React.Component {
             error={errors.password}
             placeholder="password"
           />
-          <Button disabled={this.props.loading} fullWidth>Sign In</Button>
+          <Button loading={this.props.loading} disabled={this.props.loading} fullWidth>Sign In</Button>
         </form>
       </div>
     );

@@ -23,3 +23,8 @@
   cursor: not-allowed;
   background-color: #6c757d;
 }
+
+.button i {
+  margin: 0 10px;
+  font-size: 1.2rem;
+}

@@ -50,8 +50,6 @@ export function signInFailure(error) {
   return { type: SIGN_IN_FAILURE, error };
 }
 
-const delay = (ms) => new Promise(res => setTimeout(res, ms));
-
 export function* signInSaga(email, password) {
   try {
     const signInResponse = yield axios.post('/api/auth/email', {
@@ -63,10 +61,8 @@ export function* signInSaga(email, password) {
       headers: { Authorization: `Bearer ${token}` }
     });
     const user = userResponse.data;
-    yield delay(5000);
     yield put(signInSuccess(user, token));
   } catch (error) {
-    yield delay(5000);
     yield put(signInFailure(error.response));
   }
 }
