@@ -22,6 +22,8 @@ services:
     image: movie-list-api:dev
     env_file:
       - .env.local
+    environment:
+      - NODE_ENV=development
     labels:
       - traefik.enable=true
       - traefik.backend=api
@@ -30,7 +32,7 @@ services:
 
   mongo:
     image: mongo:4
-  
+
   traefik:
     image: traefik
     command: --api --docker --docker.exposedByDefault=false

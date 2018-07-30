@@ -63,7 +63,7 @@ class SignInPage extends React.Component {
 
     return (
       <div className="sign-in-wrapper">
-        <h1 style={{ color: '#fff' }}>Sign In</h1>
+        <h1>Sign In</h1>
         <form onSubmit={this.handleFormSubmit}>
           <Input
             type="email"
@@ -71,6 +71,7 @@ class SignInPage extends React.Component {
             onChange={this.handleEmailChange}
             error={errors.email}
             placeholder="email"
+            name="email"
           />
           <Input
             type="password"
@@ -78,6 +79,7 @@ class SignInPage extends React.Component {
             onChange={this.handlePasswordChange}
             error={errors.password}
             placeholder="password"
+            name="password"
           />
           <Button loading={this.props.loading} disabled={this.props.loading} fullWidth>Sign In</Button>
         </form>

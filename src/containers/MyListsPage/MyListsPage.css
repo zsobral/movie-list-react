@@ -1,0 +1,14 @@
+.my-lists-page {
+  height: 100%;
+}
+
+.my-lists-page h1 {
+  margin: 0;
+}
+
+.my-lists-page .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}

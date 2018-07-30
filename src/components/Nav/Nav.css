@@ -1,0 +1,22 @@
+.nav-wrapper {
+  background: #252333;
+  width: 100%;
+  height: 60px;
+}
+
+.nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  color: #fff;
+  padding: 0 16px;
+}
+
+.nav .nav-brand {
+  color: inherit;
+  font-weight: 700;
+  font-size: 1.5rem;
+}

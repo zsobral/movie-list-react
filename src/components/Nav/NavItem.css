@@ -1,0 +1,19 @@
+.nav-item {
+  color: #e7e7e7;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 8px;
+  transition: all 200ms ease-out;
+}
+
+.nav-item:hover {
+  color: #ffffff;
+}
+
+.nav-item.active {
+  color: #ffffff;
+}
+
+.nav-item + .nav-item {
+  margin-left: 16px;
+}

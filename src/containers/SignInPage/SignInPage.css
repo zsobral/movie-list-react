@@ -1,6 +1,12 @@
 .sign-in-wrapper {
   max-width: 400px;
   margin: 0 auto;
-  padding: 20px;
-  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+}
+
+.sign-in-wrapper h1 {
+  text-align: center;
 }

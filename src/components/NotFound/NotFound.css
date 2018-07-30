@@ -1,0 +1,20 @@
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.not-found h1 {
+  font-size: 10rem;
+  padding: 0;
+  margin: 0;
+}
+
+.not-found h3 {
+  font-weight: 400;
+  font-size: 2.5rem;
+  padding: 0;
+  margin: 0;
+}

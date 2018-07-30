@@ -1,14 +1,36 @@
 .button {
   border: none;
-  font-weight: bold;
+  font-weight: 700;
   text-transform: uppercase;
-  padding: 12px;
+  padding: 12px 24px;
   background-color: #00C853;
-  color: #FFFFFF;
+  color: #ffffff;
   margin: 10px 0;
-  font-family: 'Roboto', sans-serif;
-  font-size: 1.2rem;
+  font-family: BlinkMacSystemFont,-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 1rem;
   cursor: pointer;
+  text-align: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 200ms ease-out;
+}
+
+a.button {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.button.outline {
+  border: 2px solid #00C853;
+  background: none;
+  color: #00C853;
+}
+
+.button.outline:hover {
+  border-color: #01AC48;
+  color: #ffffff;
 }
 
 .button:hover {
@@ -24,7 +46,6 @@
   background-color: #6c757d;
 }
 
-.button i {
-  margin: 0 10px;
-  font-size: 1.2rem;
+.button.secondary {
+  background-color: #2A2A2A;
 }

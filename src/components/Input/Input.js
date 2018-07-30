@@ -1,8 +1,19 @@
 import React from 'react';
+import { Loader } from 'react-feather';
+
 import './Input.css';
 
 function Input(props) {
-  const { type, value, onChange, label, error, ...otherProps } = props;
+  const {
+    type,
+    value,
+    onChange,
+    label,
+    error,
+    loading,
+    autoFocus,
+    ...otherProps
+  } = props;
 
   let errorLabel = null;
 
@@ -18,8 +29,10 @@ function Input(props) {
         type={type}
         value={value}
         onChange={onChange}
+        autoFocus={autoFocus}
         {...otherProps}
       />
+      {loading ? <Loader className="loader spin" /> : null}
       {errorLabel}
     </div>
   );

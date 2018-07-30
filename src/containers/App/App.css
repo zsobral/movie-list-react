@@ -1,0 +1,15 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.app .content {
+  flex: 1;
+  margin: 24px auto;
+  padding: 0 16px;
+  max-width: 1200px;
+  width: 100%;
+  box-sizing: border-box;
+  color: #fff;
+}

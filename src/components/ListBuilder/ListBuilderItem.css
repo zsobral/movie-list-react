@@ -1,0 +1,65 @@
+.list-builder-item {
+  width: 100%;
+  height: 250px;
+  border: 1px solid #000000;
+  position: relative;
+}
+
+.list-builder-item.add {
+  height: 100px;
+}
+
+.list-builder-item + .list-builder-item {
+  margin-top: 16px;
+}
+
+.list-builder-item-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.list-builder-item-wrapper .item-title {
+  position: relative;
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.list-builder-item-wrapper .item-remove {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: rgba(255, 255, 255, .8);
+  cursor: pointer;
+  padding: 8px;
+  transition: all 200ms ease-out;
+}
+
+.list-builder-item-wrapper .item-backdrop-wrapper {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.list-builder-item .item-backdrop {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-position: center;
+}
+
+.list-builder-item .item-backdrop-overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(42, 40, 59, 0.8);
+}

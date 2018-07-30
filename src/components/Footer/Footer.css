@@ -1,0 +1,31 @@
+.footer-wrapper {
+  width: 100%;
+}
+
+.footer {
+  max-width: 1200px;
+  margin: 32px auto;
+  padding: 0 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+}
+
+.footer img {
+  max-width: 100%;
+}
+
+.footer a {
+  color: #ffffff;
+  text-decoration: none;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer a + a {
+  margin-left: 20px;
+}

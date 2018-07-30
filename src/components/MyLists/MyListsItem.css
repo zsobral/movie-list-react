@@ -1,0 +1,23 @@
+.my-lists-item {
+  border: 1px solid #000000;
+  background-color: #232133;
+  padding: 8px;
+}
+
+.my-lists-item .my-list-title {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.my-lists-item + .my-lists-item {
+  margin-top: 16px;
+}
+
+.my-lists-item .posters {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0px, 300px));
+}
+
+.my-lists-item .posters img {
+  max-width: 100%;
+}

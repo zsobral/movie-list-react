@@ -1,18 +1,35 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { applyMiddleware, combineReducers, compose, createStore } from 'redux';
+import {
+  applyMiddleware,
+  combineReducers,
+  compose,
+  createStore
+} from 'redux';
 import createSagaMiddleware from 'redux-saga';
 import { Provider } from 'react-redux';
+import {
+  BrowserRouter,
+  Route
+} from 'react-router-dom';
 
 import './index.css';
-import authReducer, { watchSignInSaga } from './store/auth';
+import authReducer, {
+  watchSignInSaga,
+  watchCheckAuthSaga,
+  watchLogoutSaga
+} from './store/auth';
+import listBuilderReducer, {
+  watchSaveListSaga
+} from './store/listBuilder';
 import App from './containers/App';
 import registerServiceWorker from './registerServiceWorker';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const rootReducer = combineReducers({
-  auth: authReducer
+  auth: authReducer,
+  listBuilder: listBuilderReducer
 });
 
 const sagaMiddleware = createSagaMiddleware();
@@ -23,10 +40,15 @@ const store = createStore(
 );
 
 sagaMiddleware.run(watchSignInSaga);
+sagaMiddleware.run(watchCheckAuthSaga);
+sagaMiddleware.run(watchLogoutSaga);
+sagaMiddleware.run(watchSaveListSaga)
 
 const app = (
   <Provider store={store}>
-    <App />
+    <BrowserRouter>
+      <Route component={App} />
+    </BrowserRouter>
   </Provider>
 );
 
