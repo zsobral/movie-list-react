@@ -14,6 +14,7 @@ import SignInPage from '../SignInPage';
 import MyListsPage from '../MyListsPage';
 import ListBuilderPage from '../ListBuilderPage';
 import MovieSearchPage from '../MovieSearchPage';
+import MovieListPage from '../MovieListPage';
 import { checkAuth } from '../../store/auth';
 
 
@@ -76,6 +77,7 @@ class App extends React.Component {
             <Route path="/logout" component={Logout} />
             <Route path="/movies/search" component={MovieSearchPage} />
             <Route path="/lists/new" component={ListBuilderPage} />
+            <Route path="/lists/:id" component={MovieListPage} />
             <Route exact path="/lists" component={MyListsPage} />
             <Route exact path="/" component={HomePage} />
             <Route component={NotFound} />

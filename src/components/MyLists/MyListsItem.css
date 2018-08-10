@@ -2,6 +2,7 @@
   border: 1px solid #000000;
   background-color: #232133;
   padding: 8px;
+  cursor: pointer;
 }
 
 .my-lists-item .my-list-title {

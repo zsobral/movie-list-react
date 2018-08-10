@@ -46,6 +46,7 @@ class SignInPage extends React.Component {
 
     if(this.props.error) {
       const error = this.props.error.data.error;
+      console.log(error);
       if(error.code === 'VALIDATION_ERR') {
         errors[error.details[0].context.key] = error.details[0].message;
       }

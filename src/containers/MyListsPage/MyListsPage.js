@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import { Plus } from 'react-feather';
 
 import './MyListsPage.css';
 
@@ -25,14 +26,18 @@ class MyListsPage extends React.Component {
   render() {
 
     const lists = this.state.lists.map(list => (
-      <MyListsItem key={list.id} list={list} />
+      <MyListsItem
+        onClick={() => { this.props.history.push(`/lists/${list.id}`); }}
+        key={list.id}
+        list={list}
+      />
     ));
 
     return (
       <div className="my-lists-page">
         <div className="header">
           <h1>Lists</h1>
-          <Button to="/lists/new">NEW</Button>
+          <Button to="/lists/new"><Plus /></Button>
         </div>
         <MyLists>
           {lists}
