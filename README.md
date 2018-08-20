@@ -1,6 +1,12 @@
 # movie-list-react
 
-under development
+**under development**
+
+[demo](http://ec2-34-238-123-0.compute-1.amazonaws.com/)
+
+**Credentials**  
+email: test@zsobral.com  
+password: 123456  
 
 ## Screenshots
 
