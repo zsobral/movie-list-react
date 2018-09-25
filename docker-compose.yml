@@ -19,7 +19,7 @@ services:
       - traefik.frontend.rule=PathPrefix:/
 
   api:
-    image: movie-list-api:dev
+    image: zsobral/movie-list-api
     env_file:
       - .env.local
     environment:
